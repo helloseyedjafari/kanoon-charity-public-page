@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Return to Telegram</title>
   <script>
+    function redirectToTelegram() {
+      window.location.href = "https://t.me/YourBot?start=payment_success";
+    }
+
+    function tryCloseWindow() {
+      setTimeout(() => {
+        window.close();  // Try to close the tab
+      }, 3000);  // Wait 3 seconds before trying to close
+    }
+
     window.onload = function() {
-      window.close(); // This will close the tab if opened in a popup
+      tryCloseWindow();
     };
   </script>
 </head>
 <body>
-  <p>Payment successful! You can close this window.</p>
+  <h2>Payment Successful ✅</h2>
+  <p>Click the button below to return to Telegram:</p>
+  <button onclick="redirectToTelegram()">Return to Telegram</button>
+  <p>If the page does not close automatically, please close it manually.</p>
 </body>
 </html>
