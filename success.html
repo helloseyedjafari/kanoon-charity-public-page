@@ -2,7 +2,10 @@
 <html>
 <head>
   <title>Return to Telegram</title>
-  <script>
+  <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "https://t.me/KanoonCharityBot?start=payment_success_";
+    };
     function redirectToTelegram() {
       window.location.href = "https://t.me/KanoonCharityBot?start=payment_success_";
       window.close();  // Try to close the tab
@@ -22,7 +25,7 @@
 <body>
   <h2>Payment Successful ✅</h2>
   <p>Click the button below to return to Telegram:</p>
-  <button onclick="redirectToTelegram()">Return to Telegram</button>
+  <button id="myButton">Return to Telegram</button>
   <p>If the page does not close automatically, please close it manually.</p>
 </body>
 </html>
