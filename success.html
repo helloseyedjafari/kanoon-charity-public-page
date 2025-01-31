@@ -8,6 +8,8 @@
   <p>Click the button below to return to Telegram:</p>
   <button id="myButton">Return to Telegram</button>
   <button onclick="redirectToTelegram()">Return to Telegram 2</button>
+  <button onclick="redirectToTelegram3()">Return to Telegram 3</button>
+  <button onclick="location.href='tg://resolve?domain=KanoonCharityBot&start=payment_success_'" type="button">Return to Telegram 4</button>
   <p>If the page does not close automatically, please close it manually.</p>
 
   <script type="text/javascript">
@@ -24,6 +26,12 @@
       window.close();  // Try to close the tab
     }
 
+
+    function redirectToTelegram3() {
+      window.location.href = "tg://resolve?domain=KanoonCharityBot&start=payment_success_" + sessionId;
+      window.close();  // Try to close the tab
+    }
+    
     function tryCloseWindow() {
       setTimeout(() => {
         window.close();  // Try to close the tab
