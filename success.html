@@ -7,9 +7,9 @@
     const sessionId = urlParams.get('session_id');
     console.log("found sessionId=" + sessionId);
     
-    document.getElementById("myButton").onclick = function () {
-        location.href = "https://t.me/KanoonCharityBot?start=payment_success_"+ sessionId;
-    };
+    // document.getElementById("myButton").onclick = function () {
+        // location.href = "https://t.me/KanoonCharityBot?start=payment_success_"+ sessionId;
+    // };
 
     function redirectToTelegram() {
       window.location.href = "https://t.me/KanoonCharityBot?start=payment_success_" + sessionId;
@@ -36,7 +36,7 @@
 <body>
   <h2>Payment Successful ✅</h2>
   <p>Click the button below to return to Telegram:</p>
-  <button id="myButton">Return to Telegram</button>
+<!--   <button id="myButton">Return to Telegram</button> -->
   <button onclick="redirectToTelegram()">Return to Telegram 2</button>
   <button onclick="redirectToTelegram3()">Return to Telegram 3</button>
   <button onclick="location.href='tg://resolve?domain=KanoonCharityBot&start=payment_success_' + window.location.search" type="button">Return to Telegram 4</button>
