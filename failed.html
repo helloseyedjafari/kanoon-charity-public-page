@@ -2,48 +2,52 @@
 <html dir="rtl" lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>پرداخت نا موفق</title>
+  <!-- This meta tag helps on mobile devices, making the page initially 2x bigger -->
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <title>Payment failed</title>
   <style>
     body {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 100px; /* doubled from 50px */
       font-family: sans-serif;
     }
     .bold-text {
       font-weight: bold;
-      font-size: 24px;
-      margin-bottom: 30px;
+      font-size: 48px; /* doubled from 24px */
+      margin-bottom: 60px; /* doubled from 30px */
     }
     .return-button {
       display: inline-block;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 20px 40px; /* increased from 10px 20px */
+      font-size: 32px;    /* doubled from 16px */
       cursor: pointer;
       text-decoration: none;
       color: #fff;
       background-color: #007BFF;
-      border-radius: 4px;
+      border-radius: 8px; /* slightly bigger corner radius */
       border: none;
-      margin-bottom: 20px;
+      margin-bottom: 40px; /* increased from 20px */
     }
     .notice {
-      font-size: 14px;
+      font-size: 28px; /* doubled from 14px */
+      line-height: 1.5;
+      margin: 0 20px;
     }
   </style>
 </head>
 <body>
 
   <!-- Bold text at the top -->
-  <div class="bold-text">پرداخت نا موفق</div>
+  <div class="bold-text">Payment failed</div>
 
   <!-- "بازگشت" button with a link -->
   <a href="https://t.me/KanoonCharityBot?start=payment_failed_">
-    <button class="return-button">بازگشت</button>
+    <button class="return-button">Return to telegram</button>
   </a>
 
   <!-- Additional text below -->
   <div class="notice">
-    اگر دکمه بازگشت کار نکند لطفا این صفحه را ببندید و به تلگرام باز گردید
+        If the button doesn't work, please close this tab manually.
   </div>
 
 </body>
