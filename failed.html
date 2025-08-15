@@ -2,9 +2,9 @@
 <html dir="rtl" lang="fa">
 <head>
   <meta charset="UTF-8">
-  <!-- Make it scale properly on all devices -->
+  <!-- Proper mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment successful</title>
+  <title>Payment failed</title>
   <style>
     body {
       text-align: center;
@@ -13,8 +13,9 @@
     }
     .bold-text {
       font-weight: bold;
-      font-size: clamp(1.5rem, 5vw, 3rem); /* responsive font size */
+      font-size: clamp(1.5rem, 5vw, 3rem); /* responsive size */
       margin-bottom: 3rem;
+      color: #d9534f; /* red tone for failure */
     }
     .return-button {
       display: inline-block;
@@ -43,12 +44,12 @@
   <!-- Bold text at the top -->
   <div class="bold-text">Payment failed</div>
 
-  <!-- "Return" button with a link -->
+  <!-- Return button -->
   <a href="https://t.me/KanoonCharityBot?start=payment_failed_">
     <button class="return-button">Return to telegram</button>
   </a>
 
-  <!-- Additional text below -->
+  <!-- Additional notice -->
   <div class="notice">
     If the button doesn't work, please close this tab manually.
   </div>
