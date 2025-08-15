@@ -2,36 +2,39 @@
 <html dir="rtl" lang="fa">
 <head>
   <meta charset="UTF-8">
-  <!-- This meta tag helps on mobile devices, making the page initially 2x bigger -->
-  <meta name="viewport" content="width=device-width, initial-scale=2.0">
-  <title>Payment failed</title>
+  <!-- Make it scale properly on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment successful</title>
   <style>
     body {
       text-align: center;
-      margin-top: 100px; /* doubled from 50px */
+      margin: 10vh 5vw;
       font-family: sans-serif;
     }
     .bold-text {
       font-weight: bold;
-      font-size: 48px; /* doubled from 24px */
-      margin-bottom: 60px; /* doubled from 30px */
+      font-size: clamp(1.5rem, 5vw, 3rem); /* responsive font size */
+      margin-bottom: 3rem;
     }
     .return-button {
       display: inline-block;
-      padding: 20px 40px; /* increased from 10px 20px */
-      font-size: 32px;    /* doubled from 16px */
+      padding: 1rem 2rem;
+      font-size: clamp(1rem, 4vw, 2rem);
       cursor: pointer;
       text-decoration: none;
       color: #fff;
       background-color: #007BFF;
-      border-radius: 8px; /* slightly bigger corner radius */
+      border-radius: 0.5rem;
       border: none;
-      margin-bottom: 40px; /* increased from 20px */
+      margin-bottom: 2rem;
+    }
+    .return-button:hover {
+      background-color: #0056b3;
     }
     .notice {
-      font-size: 28px; /* doubled from 14px */
+      font-size: clamp(0.9rem, 3vw, 1.5rem);
       line-height: 1.5;
-      margin: 0 20px;
+      margin: 0 1rem;
     }
   </style>
 </head>
@@ -40,14 +43,14 @@
   <!-- Bold text at the top -->
   <div class="bold-text">Payment failed</div>
 
-  <!-- "بازگشت" button with a link -->
+  <!-- "Return" button with a link -->
   <a href="https://t.me/KanoonCharityBot?start=payment_failed_">
     <button class="return-button">Return to telegram</button>
   </a>
 
   <!-- Additional text below -->
   <div class="notice">
-        If the button doesn't work, please close this tab manually.
+    If the button doesn't work, please close this tab manually.
   </div>
 
 </body>
